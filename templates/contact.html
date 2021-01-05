@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact
+{% endblock title %}
+
+{% block body %}
+<div class="heading">
+    <h1>Contact-Me</h1>
+    <!-- <img src="{% static 'Img/cont1.jpg'%}" alt=""> -->
+</div>
+<div id="master">
+
+    <div id="enquiry">
+        <div class="contactmain">
+
+            <!-- <div class="container" style="background-color: rgb(52, 55, 66)"> if we want to add the background color in form then we can use this code -->
+            <div class="container ">
+                <form action="contact" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Enter Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Your Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                            placeholder="Enter Your Email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Enter Your Phone No.</label>
+                        <input type="phone" class="form-control" id="phone" name="phone"
+                            placeholder="Enter Your Phone No.">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" rows="3" id="comment" name="comment"
+                            placeholder="Write Something.."></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="personal">
+        <h1 id="headline">Personal-Info</h1>
+        <div class="address"><a href="#" class="fa fa-home"></a>
+            <p>Rajiv Chowk Gurgaon,Haryana</p>
+        </div> <br>
+        <div class="address"><a href="#" class="fa fa-google"></a>
+            <p>farheenriyazi14@gmail.com</p>
+        </div><br>
+        <div class="address"><a href="#" class="fa fa-phone"></a>
+            <p>7835863155</p>
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
+
+
+<style>
+    #master {
+        margin: 3%;
+        margin-top: 2%;
+    }
+
+    #enquiry {
+        background-image: url('{% static "Img/cont1.jpg"%}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Kaushan Script", cursive;
+        background-position: center center;
+        background-attachment: fixed;
+        margin: 1%;
+        padding-top: 2%;
+    }
+
+    .address {
+        display: flex;
+    }
+
+    .address p {
+        color: white;
+        margin-top: 6%;
+        padding: 0%;
+        font-weight: 400;
+        font-family: "Kaushan Script", cursive;
+        font-size: 0.8rem;
+
+    }
+
+    #headline {
+        color: white;
+        text-align: left;
+        font-size: 1.7rem;
+        margin: 1%;
+        font-family: "Kaushan Script", cursive;
+
+    }
+
+
+    .heading h1 {
+        color: white;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 0.5rem;
+        font-size: 3.7rem;
+        padding: 1%;
+    }
+
+
+    .heading {
+        color: white;
+        text-align: center;
+    }
+
+    .mb-3 {
+        color: white;
+    }
+
+    .personal {
+        padding: 3%;
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+    }
+
+    @media screen and (max-width: 992px) {
+        .heading h1 {
+            color: white;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 0.5rem;
+            font-family: "Kaushan Script", cursive;
+            font-size: 3rem;
+            padding: 3%;
+        }
+
+        .personal {
+            padding: 1%;
+            margin: 1%;
+            text-align: center;
+            display: inline;
+        }
+
+        .address p {
+            color: rgb(8, 89, 143);
+            margin-top: 1%;
+            padding: 1%;
+            font-weight: 00;
+            font-family: "Kaushan Script", cursive;
+            font-size: 0.8rem;
+            text-align: left;
+
+        }
+
+        #headline {
+            color: rgb(8, 89, 143);
+            text-align: left;
+            padding: 2%;
+            font-size: 1.6rem;
+            margin-top: 0.8%;
+            font-family: "Kaushan Script", cursive;
+
+        }
+    }
+</style>
+
+
+{% endblock body %}

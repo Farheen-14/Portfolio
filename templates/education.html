@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+{% endblock title %}
+{% block body %}
+<!-- education edit here for final touch -->
+<div class="educations">
+    <img src="{% static 'Img/book2.jpg' %}" class="image" alt="...">
+    
+    <!-- overlay what you want to overlay  -->
+    <div class="overlay">
+        <h1><span>E</span>ducation</h1>
+        <div class="background-table">
+            <!-- table-borderless we can use in class - table -->
+            <table class="table table-responsive align-middle table-borderless">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Qualifications</th>
+                        <th scope="col">University Name</th>
+                        <th scope="col">Year of Passing</th>
+                    </tr>
+                </thead>
+
+                <tbody class="content-font">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>BCA</td>
+                        <td>Annamalai University TamilNadu</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>I.SC</td>
+                        <td>Vinoba Bhave University Ranchi</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>10th</td>
+                        <td>Vinoba Bhave University Ranchi</td>
+                        <td>2008</td>
+                    </tr>
+                </tbody>
+            </table> <br><br>
+            <!-- onemore table for certificate -->
+            <!-- table-hover , we can use this for class - table table-hover for active rows -->
+            <table class="table table-responsive align-middle table-borderless">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="row">#</th>
+                        <th>Certification</th>
+                        <th>Year of Course</th>
+                    </tr>
+                </thead>
+
+                <tbody class="content-font">
+                    <tr>
+                        <th scope="row">1</th>
+                        <th>DTP (Desktop Publishing)</th>
+                        <th>2015</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <th>--</th>
+                        <th>--</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %} 
+
+
+<style>
+    .educations {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+th{
+    text-align: center;
+}
+tr{
+    text-align: center;
+}
+    .image {
+        opacity: .3;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        height: 100vh;
+        background-position: center ;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 3s ease;
+    }
+
+    .educations:hover .overlay {
+        bottom: 0;
+        height: 100%;
+    }
+
+    .educations h1 {
+        color: white;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        font-size: 3.7rem;
+        font-weight: 400;
+        padding: 1%;
+        margin-top: 2%;
+    }
+ 
+    .table {
+        color: white;
+        font-weight: 100;
+    }
+   
+    .content-font {
+        font-size: 100%;
+    }
+
+    @media screen and (max-width: 992px){
+        .educations h1 {
+            color: white;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 0.5rem;
+            font-size: 3rem;
+            padding: 3%;
+        }
+    .overlay{
+        width: 100%;
+    } 
+    .background-table tr{
+        font-size: 0.8rem;
+    }  
+    }
+</style>
+{% endblock body %}

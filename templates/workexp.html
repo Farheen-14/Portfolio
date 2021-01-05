@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Technical
+{% endblock title %}
+{% block body %}
+
+
+<div class="experience">
+    <img src="{% static 'Img/time2.jpg' %}" class="image" alt="...">
+
+    <!-- overlay what you want to overlay  -->
+    <div class="overlay">
+        <h1>Experience</h1>
+        <div class="background-table">
+            <!-- table-borderless we can use in class - table -->
+            <table class="table table-responsive align-middle table-borderless">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Designation</th>
+                        <th scope="col">Work Summary</th>
+                    </tr>
+                </thead>
+
+                <tbody class="content-font">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Feb-16 - Jul-20</td>
+                        <td>INVAS TECHNOLOGIES PVT LTD</td>
+                        <td>Operation Executive</td>
+                        <td>
+                            <ul>
+                                <li>Work on Outlook at daily basis.</li>
+                                <li> Monitoring Emails of our team members from all over India (Head Office + Resional
+                                    Offices) </li>
+                                <li> collect work report from other team members and share to reporting managers on
+                                    daily basis</li>
+                                <li> Guide to team members by Emails, calls, text</li>
+                                <li> Investigate and resolved complains by team members or exceptional/unresolved issues
+                                    from customers.
+                                </li>
+                                <li> Attending Internal and External Meeting and pass the guidance and informatioin to
+                                    other team members
+                                </li>
+                                <li>Get reports from team members and make Presentation for meetings (Internal or
+                                    External) and present
+                                    the same with help of reporting manager. </li>
+                                <li>Confidential File Handles</li>
+                                <li>Trend new members in our branch</li>
+                                <li>Access and Handle 2 Client Portals</li>
+                                <li>8-10 persons handle in our team</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Sep-15 - Jan-15</td>
+                        <td>Finish Problems Pvt Ltd</td>
+                        <td>SEO Executive</td>
+                        <td>
+                            <ul>
+                                <li>Design HTML Pages</li>
+                                <li>Write/Design Blogs/Content</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <!-- onemore table for certificate -->
+            <!-- table-hover , we can use this for class - table table-hover for active rows -->
+         </div>
+    </div>
+</div>
+
+{% include "footer.html" %} 
+
+<style>
+ 
+    .experience {
+        position: relative;
+        height: 100vh;
+    }
+
+    th {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    tr {
+        text-align: center;
+    }
+    .background-table tr {
+        font-size: 0.9rem;
+        }
+    .image {
+        opacity: .5;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Kaushan Script", cursive;
+        height: 100vh;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 3s ease;
+    }
+
+    .experience:hover .overlay {
+        bottom: 0;
+        height: 100%;
+    }
+
+    .experience h1 {
+        color: white;
+        text-align: center;
+        letter-spacing: 0.5rem;
+        font-size: 3.7rem;
+        font-weight: 400;
+        margin-top: 2%;
+        padding: 1%;
+        border: 1px solid black;
+    }
+
+    .table {
+        color: white;
+    }
+ 
+
+    @media screen and (max-width: 992px) {
+        .experience h1 {
+            color: white;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 0.5rem;
+            font-size: 3rem;
+            padding: 1%;
+            margin-top: 2%;
+            border: 1px solid black;
+            
+          }
+
+        .overlay {
+            width: 100%;
+        }
+
+        .background-table tr {
+            font-size: 0.7rem;
+        }
+        
+     }
+@media screen and (max-width: 700px) {
+        .background-table tr {
+            font-size: 0.6rem;
+            }
+        .experience h1 {
+            color: white;
+            margin-top: 2%;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: 0.5rem;
+            font-size: 2.6rem;
+            padding: 1%;
+            border: 1px solid black;
+        }
+
+    .table-dark th{
+        font-size: 0.8rem;
+    }
+    }
+
+</style>
+{% endblock body %}

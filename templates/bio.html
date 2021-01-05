@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-Website</title>
+    <link rel="stylesheet" href="Portfolio.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Balsamiq+Sans:wght@700&family=Bangers&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Balsamiq+Sans:wght@700&family=Bangers&family=Kaushan+Script&family=Lobster&display=swap"
+        rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $("#icon").click(function () {
+                $('ul').toggleClass("show");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#srch").click(function () {
+                $("#search").fadeToggle("newclass");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label class="logo"><span>F</span>arheen <span>A</span>nsari</label>
+            <ul>
+                <li> <a class="active" href="#" id="Home"> Home</a> </li>
+                <li><a href="#"> About Us </a></li>
+                <li><a href="#"> Service </a></li>
+                <li><a href="#"> Contact Us </a></li>
+                <li><a href="#"> Feedback </a></li>
+                <div id="search">
+                    <input type="search" name="search" placeholder="Search">
+                </div>
+                <label id="srch">
+                    <i class="fas fa-search"></i>
+                </label>
+            </ul>
+            <label id="icon">
+                <i class="fas fa-bars"> </i>
+            </label>
+        </nav>
+    </header>
+
+    <section>
+        <div id="head">      
+        <div id="first">
+            <h1>Welcome to My Website</h1>
+            <h3>It's All About Me..</h3>
+            <button id="btn">Portfolio</button>
+            <!-- <a href="#" id="btn">Portfolio</a>  -->
+            <!-- need chk  -->
+        </div>
+    </div>
+        <!-- Second Sesion -->
+        <div id="second">
+            <div id="secimg">
+                <div class="secbackground">
+                    <div class="secondhead">
+                        <h1>HOBB<span>I</span>EES</h1>
+                        <hr>
+                        <P>This is a partial list of hobbies. A hobby is an activity, interest, or pastime that is
+                            undertaken for pleasure or relaxation, done during one's own time. This list includes only
+                            recognized hobbies
+                            that have been the subject of published discussions or that have organized membership
+                            associations.
+                            Entries in this list should be links to Wikipedia articles about very specific hobbies or to
+                            articles about
+                            thes ubjects of hobbies where there is a section demonstrating that it is or was recognized
+                            as a
+                            hobby.
+                        </P>
+                    </div>
+                </div>
+            </div>
+            <!-- 1st hobbies -->
+            <div id="secnd">
+                <div class="sec1">
+                    <img src="/Portfolio/Img/soft.png" alt="soft">
+                    <h2>SOFTWARE DEVELOPER</h2>
+                    <P>Software developers are the creative minds behind software programs, and they have the technical
+                        skills to build those programs or to oversee their creation by a team. They create software that
+                        enables users to perform specific tasks on computer devices</P>
+                </div>
+                <!-- 2nd hobbies -->
+                <div class="sec1">
+                    <img src="/Portfolio/Img/develp.jpeg" alt="website">
+                    <h2>WEB DEVELOPER</h2>
+                    <P>Web Developer job description guide. A Web Developer is responsible for the coding, design and
+                        layout
+                        of a website according to a company's specifications. As the role takes into consideration user
+                        experience and function, a certain level of both graphic design and computer programming is
+                        necessary</P>
+                </div>
+                <!-- 3rd hobbies -->
+                <div class="sec1">
+                    <img src="/Portfolio/Img/creative.png" alt="creative">
+                    <h2>CREATIVITY</h2>
+                    <P>A creative mind is the one that sees information – particularly from the world around it – and
+                        relates it to their experiences and existing knowledge in order to create.</P>
+                </div>
+                <!-- 4th hobbies -->
+                <div class="sec1">
+                    <img src="/Portfolio/Img/cricket.jpg" alt="cricket">
+                    <h2>CRICKET</h2>
+                    <P>Cricket is a sport which is played between two teams of eleven players each who score runs
+                        (points).
+                        This is done by hitting the ball across the boundary, or by running between two sets of three
+                        small,
+                        wooden posts called wickets. ... The area of play is a 30 yard circle inside the cricket ground
+                        or
+                        stadium.</P>
+                </div>
+                <!-- 5th hobbies -->
+                <div class="sec1">
+                    <img src="/Portfolio/Img/sing.jpg" alt="singing">
+                    <h2>SINGING</h2>
+                    <P>Singing is the act of producing musical sounds with the voice and augments regular speech by the
+                        use
+                        of sustained tonality, rhythm, and a variety of vocal techniques. ... Singers perform music
+                        (arias,
+                        recitatives, songs, etc.) that can be sung with or without accompaniment by musical
+                        instruments..
+                    </P>
+                </div>
+                <!-- 6th hobbies -->
+                <div class="sec1">
+                    <img src="/Portfolio/Img/dance.jpg" alt="dancing">
+                    <h2>DANCING</h2>
+                    <P>Dance, the movement of the body in a rhythmic way, usually to music and within a given space, for
+                        the
+                        purpose of expressing an idea or emotion, releasing energy, or simply taking delight in the
+                        movement
+                        itself.</P>
+                </div>
+            </div>
+            <!-- Third Sesion Recent Projects -->
+            <div id="third">
+                <h1>Recent <span>Project</span> <hr></h1>
+                <div id="third2">
+                    <div class="thrd">
+                        <h2>Project 1</h2>
+                        <h3>Coding Lover</h3>
+                        <p>Coding is the process of translating and writing codes from one language to another whereas
+                            Programming is the process of building an executable program that can be used to carry out
+                            proper machine level outputs.</p>
+                    </div>
+                    <img class="pic" src="/Portfolio/Img/clock1.jpg" alt="picture">
+                </div>
+
+                <div id="third2">
+                    <div class="thrd">
+                        <h2>Project 2</h2>
+                        <h3>Coding Lover</h3>
+                        <p>Coding is the process of translating and writing codes from one language to another whereas
+                            Programming is the process of building an executable program that can be used to carry out
+                            proper machine level outputs.</p>
+                    </div>
+                    <img class="pic" src="/Portfolio/Img/clock1.jpg" alt="picture">
+                </div>
+                    
+                <div id="third2">
+                    <div class="thrd">
+                        <h2>Project 3</h2>
+                        <h3>Coding Lover</h3>
+                        <p>Coding is the process of translating and writing codes from one language to another whereas
+                            Programming is the process of building an executable program that can be used to carry out
+                            proper machine level outputs.</p>
+                    </div>
+                    <img class="pic" src="/Portfolio/Img/clock1.jpg" alt="picture">
+                </div>
+            </div>
+<!-- Forth Section - About me -->
+<div id="about">
+    
+    <h1><span>A</span>bout<span> M</span>e</h1>
+    <h2><u>Front End Developer</u></h2>
+    <p>Innovative Front End Developer, building and maintaining responsive websites in the recruiting industry. Proficient in Python, Java, C & C++, HTML, CSS, Javascript,Visual Basic. Psationate about usability and process working knowledge of Adope Photoshop.</p>
+<button id="btnn">Download Resume</a></button> <br><br>
+
+<img class="abtimg" src="/Portfolio/Img/me.jpg" alt="farheen">
+</div>
+
+<!-- contact information -->
+
+<footer> 
+        <h1><span>C</span>ontact- <span>I</span>nfo</h1>
+        <div id="contact">
+            <div class="cont">
+                <img src="/One-Page Project - My Use/Img/phone.png" alt="address">
+                <h2>Phone</h2>
+                <h3>7835863155</h3>
+            </div>
+            <div class="cont">
+                <img src="/One-Page Project - My Use/Img/email2.jpg" alt="address">
+                <h2>Email-ID</h2>
+                <h3>7835863155</h3>
+            </div>
+            <div class="cont">
+                <img src="/One-Page Project - My Use/Img/address1.jpg" alt="address">
+                <h2>Address</h2>
+                <h3>7835863155</h3>
+            </div>
+        </div>
+<div id="foot">
+<p> Copyright @ 2020 Ansari. All rights reserved</p>
+</div>
+</footer>
+    </section>
+
+</body>
+
+</html>

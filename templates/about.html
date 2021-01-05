@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="head">
+    <h1>About-Me</h1>
+</div>
+<div class="aboutme">
+    <div class="about1">
+        <img src="{% static 'Img/me.jpg' %}" class="image" alt="...">
+    </div>
+    <div class="about2">
+        <h2>Full Stack Developer</h2>
+        <p>Innovative Full Stack Developer, building and maintaining responsive websites in the recruiting industry.
+            Proficient in Python, Java, C & C++, HTML, CSS, Javascript, Mysql. Psationate about usability and
+            process working knowledge of Adope Photoshop.</p>
+            <button type="submit" class="btn btn-primary mb-3">Download-Resume</button>
+    </div>
+</div>
+{% include "footer.html" %}
+
+
+<style>
+    .aboutme {
+        background-color: white;
+        display: flex;
+        margin-bottom: 2%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+
+    }
+
+    .about1 {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .about2 {
+        padding: 1%;
+        margin: 5%;
+        text-align: left;
+    }
+
+    .image {
+        text-align: center;
+        margin: 50px;
+        width: 279px;
+        height: 430px;
+
+    }
+
+
+    .head h1 {
+        color: black;
+        background-color: white;
+        text-align: center;
+        margin-top: 3%;
+        letter-spacing: 0.5rem;
+        font-size: 3.7rem;
+        font-weight: 400;
+        padding: 1%;
+
+    }
+
+
+
+
+
+    @media screen and (max-width: 990px) {
+        .aboutme {
+            flex-direction: column-reverse;
+            padding: 1%;
+            margin: 10%;
+        }
+
+        .about2 {
+            padding: 5%;
+            margin: 11%;
+            text-align: center;
+            border: 1px solid black;
+
+        }
+
+        .image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 230px;
+            height: 365px;
+        }
+
+        .head h1 {
+            color: black;
+            background-color: white;
+            text-align: center;
+            margin-top: 3%;
+            letter-spacing: 0.5rem;
+            font-size: 3rem;
+            font-weight: 400;
+            padding: 1%;
+        }
+
+    }
+</style>
+
+
+
+{% endblock body %}

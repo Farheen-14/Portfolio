@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Technical
+{% endblock title %}
+{% block body %}
+
+<div class="head">
+    <div class="skills">
+        <img src="{% static 'Img/skill1.jpeg' %}" class="skillimage" alt="...">
+        {% comment %} overlay example {% endcomment %}
+        <div class="skilloverlay">
+            <h1>Skills</h1>
+            <div class="row row-cols-1 row-cols-md-2 g-5 px-5">
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'Img/background1st.jpeg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Front-End Skill
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">HTML</li>
+                                        <li class="list-group-item">CSS</li>
+                                        <li class="list-group-item">JavaScript</li>
+                                        <li class="list-group-item">Jquery</li>
+                                        <li class="list-group-item">Bootstrap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'Img/code1.jpeg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Back-End Skill
+                            </a>
+                            <div class="collapse" id="collapseExample1">
+                                <div class="card card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Python</li>
+                                        <li class="list-group-item">Django</li>
+                                        <li class="list-group-item">Mysql</li>
+                                        <li class="list-group-item">PostgreSQL</li>
+                                        <li class="list-group-item">Java-Core</li>
+                                        <li class="list-group-item">Visual-Basic</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'Img/front.jpeg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Other Technical Skill
+                                <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
+                            </a>
+                            <div class="collapse" id="collapseExample2">
+                                <div class="card card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Git/GitHub</li>
+                                        <li class="list-group-item">C/C++</li>
+                                        <li class="list-group-item">MS-Office</li>
+                                        <li class="list-group-item">Outlook</li>
+                                        <li class="list-group-item">DTP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="{% static 'Img/code2.jpeg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <a class="btn btn-dark" data-bs-toggle="collapse" href="#collapseExample3" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Soft Skill
+                                <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
+                            </a>
+                            <div class="collapse" id="collapseExample3">
+                                <div class="card card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Leadership</li>
+                                        <li class="list-group-item">Team Player</li>
+                                        <li class="list-group-item">Communication</li>
+                                        <li class="list-group-item">Presentation Skills</li>
+                                        <li class="list-group-item">Initiative</li>
+                                        <li class="list-group-item">Problem Solving</li>
+                                        <li class="list-group-item">Creativity</li>
+                                        <li class="list-group-item">Creativity</li>
+                                        <li class="list-group-item">Active Listening</li>                                      
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% comment %} styling {% endcomment %}
+
+<style>
+    body html{
+        margin: 0%;
+        padding: 0%;
+    }
+    .skills {
+        position: relative;
+        width: 100%;
+    }
+
+    .skillimage {
+        position: fixed;
+        opacity: .3;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        height: 100vh;
+        width: 100%;
+        background-position: center ;
+        background-attachment: fixed;
+    } 
+
+    .skilloverlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        <!-- background-color: black; -->
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .5s ease;
+    }
+
+    .skills:hover .skilloverlay {
+        width: 100%;
+    }
+
+    .card-body {
+        background-color: black;
+        text-align: center;
+        width: 100%;
+    }
+
+    .head h1 {
+        color: white;
+        text-align: center;
+        margin-top: 3%;      
+        letter-spacing: 0.5rem;
+        font-size: 3.7rem;
+        font-weight: 400;
+        padding: 1%;
+    }
+
+    .card {
+        border: rgb(10, 99, 110);
+    }
+.row{
+    background-size: cover; 
+    height: 100vh;
+    background-position: center ;
+    width: 100%;
+    background-attachment: fixed;}
+    }   
+    
+    @media screen and (max-width: 1120px){
+
+
+    }
+    @media screen and (max-width: 992px){
+.card ul{
+    font-size: 0.8rem;
+}
+
+.skillimage {
+    background-size: cover; 
+    height: 100vh;
+    background-position: center ;
+    width: 100%;
+    background-attachment: fixed;
+} 
+.head h1 {
+    font-size: 3rem;
+    padding: 10%;
+  }
+   }
+</style>
+{% endblock body %}
