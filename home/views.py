@@ -38,8 +38,8 @@ def contact(request):
         comment = request.POST['comment']
         # Contactdata = contactdata.objects.create_contactdata(name=name, email=email, phone=phone,comment=comment,date=datetime.today())
         # Contactdata.save();
-        Contactdata = contactdata(name=name, email=email, phone=phone,comment=comment)
-        Contactdata.save();
+        x = contactdata(name=name, email=email, phone=phone,comment=comment)
+        x.save();
     return render(request,'contact.html')
 def footer(request):
     return render(request,'footer.html')

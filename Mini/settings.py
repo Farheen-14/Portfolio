@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent 
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,6 +24,7 @@ SECRET_KEY = '$^!ii@&96e9if58w9%=v#b&=nk0i0%u$g^5_7o*((i%-71zw22'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# this is the previous ALLOWED_HOSTS = []
 ALLOWED_HOSTS = []
 
 
@@ -74,13 +75,19 @@ WSGI_APPLICATION = 'Mini.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME' :   os.path.join(BASE_DIR, 'db.sqlite3'),
+        'USER' : '',
+        'PASSWORD' : '',
+        'HOST' : '',  
+        'PORT' : '',     
         # 'NAME': BASE_DIR / 'db.mysql',
-        # maually entered
-        'NAME' : 'Farheen',
-        'USER' : 'postgres',
-        'PASSWORD' : 'minni',
-        'HOST' : 'localhost',   
+        # maually entered- below for postgresql
+        # 'NAME' : 'Farheen',   
+        # 'USER' : 'postgres',
+        # 'PASSWORD' : 'minni',
+        # 'HOST' : 'localhost',   
     }
 }
 
@@ -124,7 +131,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # added manuall
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
+    os.path.join(BASE_DIR / "static")
+    #  os.path.join(BASE_DIR / "static"),
+    # '/var/www/static/', ----not using this...
 ]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'assets')

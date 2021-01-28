@@ -23,6 +23,8 @@ admin.site.index_title = "Welcome to Farheen Ansari Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+# the below line added for saving the data in postgresql
+    # path('contact/', include('home.urls')),
     path('', include('home.urls'))
 
 

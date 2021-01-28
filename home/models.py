@@ -8,3 +8,8 @@ class contactdata (models.Model):
     email = models.EmailField()
     phone = models.CharField(max_length=15)
     comment = models.TextField()
+
+def __str__(self):
+    return self.name()
+
+    
